@@ -8,6 +8,7 @@ body {
     text-align: center;
     background: #222;
     color: #FFF;
+    font-family: monospace;
 }
 
 #svg-waves-top {
@@ -15,26 +16,65 @@ body {
     width: 100%;
     height: 50vh;
     position: fixed;
+    z-index: 9;
 }
 
-#svg-wave-top-2 {
-    visibility: hidden;
+#navbar {
+    position: fixed;
+    top: 5px;
+    left: 0;
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 0 0 2px black;
+    z-index: 10;
+}
+
+#navbar li {
+    list-style: none;
+    display: inline;
+    justify-content: space-around;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
 }
 
 .new-section {
     color: white;
     font-size: 4rem;
-    text-shadow: 0 0 3px black;
+    text-shadow: 0 0 5px black;
+    padding-top: 10vh;
+}
+
+#profile-photo {
+    border-style: solid;
+    border-width: 10px;
+    border-color: white;
+    border-radius: 50%;
+    margin-top: 20vh;
+    margin-right: 65vw;
+}
+
+#welcome-section {
+    position: absolute;
+    margin-top: -37.5vh;
+    margin-left: 40vw;
 }
 
 .im-connor {
     color: white;
-    font-size: 7rem;
-    text-shadow: 0 0 5px black;
+    font-size: 6rem;
+    text-shadow: 0 0 7px black;
 }
 
 .im-connor-sub {
     color: white;
-    font-size: 4rem;
-    text-shadow: 0 0 3px black;
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px black;
 }
