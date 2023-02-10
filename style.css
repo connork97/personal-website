@@ -10,11 +10,15 @@ body {
     color: #FFF;
 }
 
-.waves-top {
+#svg-waves-top {
     top: 0;
     width: 100%;
-    height: auto;
+    height: 50vh;
     position: fixed;
+}
+
+#svg-wave-top-2 {
+    visibility: hidden;
 }
 
 .new-section {
