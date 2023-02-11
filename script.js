@@ -9,8 +9,28 @@ const tween = KUTE.fromTo(
 
 tween.start()
 
-//Hexagon SVG Functions
+const scroll = (function(){
 
+    var parallax = document.querySelectorAll("body"),
+        speed = 0.35;
+  
+    window.onscroll = function(){
+      [].slice.call(parallax).forEach(function(el,i){
+  
+        var windowYOffset = window.pageYOffset,
+            elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+  
+        el.style.backgroundPosition = elBackgrounPos;
+  
+      });
+    };
+  
+  })();
+
+  scroll.start()
+
+//Hexagon SVG Functions
+/*
 const hex1 = KUTE.fromTo(
     '#l1a',
     {path: '#l1a'},
@@ -235,3 +255,5 @@ const hex25 = KUTE.fromTo(
 )
 
 hex25.start()
+
+*/
