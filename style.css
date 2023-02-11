@@ -9,19 +9,49 @@ body {
     background: #222;
     color: #FFF;
     font-family: monospace;
+    overflow-x: hidden;
 }
+
+/* General Elements that will be Reused */
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    width: 90vw;
+    margin: auto;
+}
+
+.new-section {
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0 0 5px black;
+    padding-top: 10vh;
+}
+
+/* Top/Navbar Elements */
 
 #svg-waves-top {
     top: 0;
     width: 100%;
-    height: 50vh;
+    height: 15vh;
     position: fixed;
     z-index: 9;
 }
 
+#empty-div-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 2vh;
+    background-color: #C62368;
+    width: 100vw;
+    z-index: 10;
+}
+
 #navbar {
     position: fixed;
-    top: 5px;
+    top: 2vh;
     left: 0;
     min-height: 10vh;
     width: 100%;
@@ -29,7 +59,7 @@ body {
     flex-direction: row;
     justify-content: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-shadow: 0 0 2px black;
     z-index: 10;
 }
@@ -45,36 +75,73 @@ body {
     color: white;
 }
 
-.new-section {
-    color: white;
-    font-size: 4rem;
-    text-shadow: 0 0 5px black;
-    padding-top: 10vh;
+/* Welcome Section */
+
+.grid-container-welcome {
+    display: grid;
+    align-items: center;
+    width: 80vw;
+    padding: 20vh 15vw 0 15vw; 
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "profile-photo my-name"
+        "profile-photo my-name-sub";
 }
 
 #profile-photo {
+    grid-area: profile-photo;
+    grid-row: span 2;
     border-style: solid;
     border-width: 10px;
     border-color: white;
     border-radius: 50%;
-    margin-top: 20vh;
-    margin-right: 65vw;
-}
-
-#welcome-section {
-    position: absolute;
-    margin-top: -37.5vh;
-    margin-left: 40vw;
 }
 
 .im-connor {
+    grid-area: my-name;
     color: white;
-    font-size: 6rem;
+    font-size: 4.5rem;
     text-shadow: 0 0 7px black;
 }
 
 .im-connor-sub {
+    grid-area: my-name-sub;
     color: white;
     font-size: 2.5rem;
     text-shadow: 0 0 5px black;
+}
+
+/* About Me Section */
+
+#about-me-head {
+    padding-bottom: 5vh;
+}
+
+/* Projects Section */
+
+#projects-head {
+    padding-bottom: 10vh;
+}
+
+.projects-grid-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: auto 5vw auto 5vw;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 10vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5vw;
+    grid-template-areas: 
+        "img1 img1 text1"
+        "text2 img2 img2"
+        "img3 img3 text3"
+        "text4 img4 img4";
+}
+
+.proj-img {
+    width: auto;
+    height: 60vh;
+    grid-column: span 2;
 }
