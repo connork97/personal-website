@@ -1,15 +1,19 @@
 * {
-    margin: 0;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0 0 0 0;
     position: relative;
     text-align: center;
     background: #222;
     color: #FFF;
     font-family: monospace;
-    overflow-x: hidden;
 }
 
 /* General Elements that will be Reused */
@@ -18,8 +22,8 @@ p {
     font-size: 1.5rem;
     line-height: 1.5rem;
     text-align: justify;
-    width: 90vw;
     margin: auto;
+    width: 90vw;
 }
 
 .new-section {
@@ -30,6 +34,7 @@ p {
 }
 
 /* Top/Navbar Elements */
+
 
 #svg-waves-top {
     top: 0;
@@ -80,13 +85,14 @@ p {
 .grid-container-welcome {
     display: grid;
     align-items: center;
+    margin: auto;
     width: 80vw;
-    padding: 20vh 15vw 0 15vw; 
+    padding: 20vh 0 0 0; 
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-        "profile-photo my-name"
-        "profile-photo my-name-sub";
+        "profile-photo my-name my-name"
+        "profile-photo my-name-sub my-name-sub";
 }
 
 #profile-photo {
@@ -94,7 +100,7 @@ p {
     grid-row: span 2;
     border-style: solid;
     border-width: 10px;
-    border-color: white;
+    border-color: #DD3F82;
     border-radius: 50%;
 }
 
@@ -124,7 +130,7 @@ p {
     padding-bottom: 10vh;
 }
 
-.projects-grid-container {
+#projects-grid-container {
     display: grid;
     align-items: center;
     justify-items: center;
@@ -132,7 +138,6 @@ p {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 10vh;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5vw;
     grid-template-areas: 
         "img1 img1 text1"
         "text2 img2 img2"
@@ -142,6 +147,21 @@ p {
 
 .proj-img {
     width: auto;
-    height: 60vh;
+    height: 50vh;
     grid-column: span 2;
+    box-shadow: 0 0 15px black;
+    border-style: solid;
+    border-color: #DD3F82;
+    border-width: 10px;
+    border-radius: 50px;
+}
+
+.proj-text {
+    font-size: 2.5rem;
+    text-shadow: 0 0 3px black;
+    border-style: solid;
+    border-color: #DD3F82;
+    border-width: 2rem;
+    border-radius: 25px;
+    background-color: #DD3F82;
 }
