@@ -24,7 +24,7 @@ body {
     color: white;
     font-size: 4rem;
     text-shadow: 0 0 5px black;
-    padding-top: 10vh;
+    padding-top: 15vh;
     padding-bottom: 10vh;
 }
 
@@ -54,6 +54,7 @@ body {
     top: 2vh;
     left: 0;
     min-height: 10vh;
+    max-height: 15vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -65,9 +66,15 @@ body {
 }
 
 #navbar li {
+    transition: ease-out, 0.3s;
     list-style: none;
     display: inline;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.navlink:hover {
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
 }
 
 #navbar a {
@@ -165,6 +172,41 @@ body {
     border-color: #DD3F82;
     border-width: 10px;
     border-radius: 50px;
+    animation:
+        projImgBorder 30s infinite,
+}
+
+#proj-img-wheel, #proj-img-music {
+    animation: projImgBreathing 7.5s linear infinite;
+}
+
+#proj-img-number, #proj-img-oldsite {
+    animation: projImgBreathing2 5s linear infinite;
+}
+
+@keyframes projImgBorder {
+    0% { border-color: #E66199 }
+    11% { border-color: #DD3F82  }
+    22% { border-color: #D31B68 }
+    33% { border-color: #A8074B }
+    44% { border-color: #810036 }
+    55% { border-color: #810036 }
+    66% { border-color: #A8074B  }
+    77% { border-color: #D31B68 }
+    88% { border-color: #DD3F82 }
+    100% { border-color: #E66199 }
+}
+
+@keyframes projImgBreathing {
+    0% { scale: 1 }
+    50% { scale: 1.015 }
+    100% { scale: 1 }
+}
+
+@keyframes projImgBreathing2 {
+    0% { scale: 1.015 }
+    50% { scale: 1 }
+    100% { scale: 1.015 }
 }
 
 .proj-text {
@@ -172,11 +214,52 @@ body {
     text-decoration: none;
     font-size: 2.5rem;
     text-shadow: 0 0 3px black;
-    border-style: solid;
-    border-color: #DD3F82;
+    padding: 1rem;
     border-width: 2rem;
     border-radius: 25px;
     background-color: #DD3F82;
+    animation:
+        projtextbackground 30s linear infinite,
+}
+
+#proj-text-wheel, #proj-text-music {
+    animation: projTextJump 10s ease infinite;
+}
+
+#proj-text-number, #proj-text-oldsite {
+    animation: projTextJump2 10s ease infinite;
+}
+
+@keyframes projtextbackground {
+    0% { background-color: #E66199 }
+    11% { background-color: #DD3F82  }
+    22% { background-color: #D31B68 }
+    33% { background-color: #A8074B }
+    44% { background-color: #810036 }
+    55% { background-color: #810036 }
+    66% { background-color: #A8074B  }
+    77% { background-color: #D31B68 }
+    88% { background-color: #DD3F82 }
+    100% { background-color: #E66199 }
+}
+
+@keyframes projTextJump {
+    0% { transform: translateY(0px) }
+    5% { transform: translateY(-15px) }
+    7.5% { transform: translateY(0px) }
+    12.5% { transform: translateY(-15px) }
+    15% { transform: translateY(0px) }
+    100% { transform: translateY(0px) }
+}
+
+@keyframes projTextJump2 {
+    0% { transform: translateY(0px) }
+    50% {transform: translateY(0px) }
+    55% { transform: translateY(-15px) }
+    57.5% { transform: translateY(0px) }
+    62.5% { transform: translateY(-15px) }
+    65% { transform: translateY(0px) }
+    100% { transform: translateY(0px) }
 }
 
 .proj-link {
@@ -197,7 +280,15 @@ body {
 }
 
 .contact-me {
+    transition: 0.35s ease-out;
+    transform: translateY(-12.5px);
     color: white;
     text-decoration: none;
     z-index: 10;
+}
+
+.contact-me:hover {
+    scale: 1.1;
+    transform: translateY(12.5px);
+    transition: ease-in, 0.7s;
 }
