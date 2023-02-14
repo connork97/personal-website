@@ -4,14 +4,17 @@ const tween = KUTE.fromTo(
     '#wave-top-1b',
     {path: '#wave-top-1b'},
     {path: '#wave-top-2b'},
-    {repeat: 999, duration: 5000, yoyo: true}
+    {repeat: 999, duration: 4000, yoyo: true}
 )
 
 tween.start()
 
+
+
 //Hexagon SVG Functions
 
 //const hexArrA = ['#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', ]
+
 
 const hex1 = KUTE.fromTo(
     '#l1a',
