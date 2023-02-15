@@ -115,13 +115,64 @@ body {
     text-shadow: 0 0 7px black;
 }
 
-span {
+.c, .o1, .n1, .n2, .o2, .r1, .k, .o3, .r2, .m, .o4, .s {
     display: inline-block;
     transform: translateY(-25vh);
-    animation: fallingName 100000s linear 1;
-    animation-fill-mode: forwards;
+    animation: fadeInDownBigConnor 3s normal forwards 1;
 }
 
+.c:hover, .o1:hover, .n1:hover, .n2:hover, .o2:hover, .r1:hover, .k:hover, .o3:hover, .r2:hover, .m:hover, .o4:hover, .s:hover {
+    animation-name: fadeInDownBigConnor 3s normal forwards 1;
+    transform-origin: center bottom;
+    z-index: 10;
+}
+
+@keyframes upOffPage {
+    0%,
+    to { transform: translateY(-25vh); }
+}
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -30px, 0) scaleY(1.1);
+    }
+  /*
+    70% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -15px, 0) scaleY(1.05);
+    }
+  */
+    80% {
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0) scaleY(0.95);
+    }
+  /*
+    90% {
+      transform: translate3d(0, -4px, 0) scaleY(1.02);
+    }*/
+  }
+@keyframes fadeInDownBigConnor {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -20vh, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+/*
 @keyframes fallingName {
     0% { transform: translateY(-25vh); }
     0.00075% { transform: translateY(0vh); }
@@ -131,38 +182,38 @@ span {
     0.00275% {transform: translateY(0vh); }
     100% { transform: translateY(0vh); }
 }
-
-span:nth-child(2) {
+*/
+.o1 {
     animation-delay: 1.2s;
 }
-span:nth-child(3) {
-    animation-delay: 1.65s;
+.n1 {
+    animation-delay: .6s;
 }
-span:nth-child(4) {
+.n2 {
     animation-delay: 0.75s;
 }
-span:nth-child(5) {
-    animation-delay: 0.6s;
+.o2 {
+    animation-delay: 1.65s;
 }
-span:nth-child(6) {
+.r1 {
     animation-delay: 0.3s;
 }
-span:nth-child(7) {
+.k {
     animation-delay: 1.05s;
 }
-span:nth-child(8) {
+.o3 {
     animation-delay: 0.9s;
 }
-span:nth-child(9) {
+.r2 {
     animation-delay: 0.45s;
 }
-span:nth-child(10) {
+.m {
     animation-delay: 1.5s;
 }
-span:nth-child(11) {
+.o4 {
     animation-delay: 0.15s;
 }
-span:nth-child(12) {
+.s {
     animation-delay: 1.35s;
 }
 
@@ -181,10 +232,10 @@ span:hover {
     color: white;
     font-size: 2.75rem;
     text-shadow: 0 0 5px black;
-    animation: fallingNameSub 100000s ease 1;
+    animation: fadeInNameSub 100000s ease 1;
 }
 
-@keyframes fallingNameSub {
+@keyframes fadeInNameSub {
     0% { opacity: 0; scale: 0.1; }
     0.00475% { opacity: 0; scale: 0.1; }
     0.00725% { opacity: 1; scale: 1; }
@@ -201,6 +252,68 @@ span:hover {
 
 #about-me-head {
     padding-bottom: 10vh;
+}
+
+span:hover {
+    animation: bounce;
+    animation-play-state: paused;
+}
+  
+#about-me-head:hover, #projects-head:hover, #contact-me-head:hover {
+    animation: bounce 1s normal forwards 1;
+}
+
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -30px, 0) scaleY(1.1);
+    }
+  /*
+    70% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -15px, 0) scaleY(1.05);
+    }
+  */
+    80% {
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0) scaleY(0.95);
+    }
+  /*
+    90% {
+      transform: translate3d(0, -4px, 0) scaleY(1.02);
+    }*/
+  }
+
+#about-me-head:hover, #l1:hover {
+    animation: bounce 1s normal forwards 1;
+    animation-delay: 0.1s;
+}
+#l2 {
+    animation-delay: 0.2s;
+}
+#l3 {
+    animation-delay: 0.3s;
+}
+#l4 {
+    animation-delay: 0.4s;
+}
+#l5 {
+    animation-delay: 0.5s;
+}
+#l6 {
+    animation-delay: 0.6s;
+}
+#l7 {
+    animation-delay: 0.7s;
 }
 
 #about-me-text {
