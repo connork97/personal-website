@@ -9,8 +9,29 @@ const tween = KUTE.fromTo(
 
 tween.start()
 
+//Background Scroll Offset Function
 
+const scroll = (function(){
 
+    var parallax = document.querySelectorAll("body"),
+        speed = 0.35;
+  
+    window.onscroll = function(){
+      [].slice.call(parallax).forEach(function(el,i){
+  
+        var windowYOffset = window.pageYOffset,
+            elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+  
+        el.style.backgroundPosition = elBackgrounPos;
+  
+      });
+    };
+  
+  })();
+
+  scroll.start()
+
+/*
 //Hexagon SVG Functions
 
 //const hexArrA = ['#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', ]
@@ -241,24 +262,4 @@ const hex25 = KUTE.fromTo(
 
 hex25.start()
 
-//Background Scroll Offset Function
-
-const scroll = (function(){
-
-    var parallax = document.querySelectorAll("body"),
-        speed = 0.35;
-  
-    window.onscroll = function(){
-      [].slice.call(parallax).forEach(function(el,i){
-  
-        var windowYOffset = window.pageYOffset,
-            elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-  
-        el.style.backgroundPosition = elBackgrounPos;
-  
-      });
-    };
-  
-  })();
-
-  scroll.start()
+*/
