@@ -33,6 +33,40 @@ body {
     max-height: 15vh;
 }
 
+#about-me-head:hover, #projects-head:hover, #contact-me-head:hover {
+    animation: bounce 1s normal forwards 1;
+}
+
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -30px, 0) scaleY(1.1);
+    }
+  
+    70% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -15px, 0) scaleY(1.05);
+    }
+  
+    80% {
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0) scaleY(0.95);
+    }
+  
+    90% {
+      transform: translate3d(0, -4px, 0) scaleY(1.02);
+    }
+  }
+
 /* Top/Navbar Elements */
 
 
@@ -123,14 +157,8 @@ body {
 
 .c:hover, .o1:hover, .n1:hover, .n2:hover, .o2:hover, .r1:hover, .k:hover, .o3:hover, .r2:hover, .m:hover, .o4:hover, .s:hover {
     animation-name: fadeInDownBigConnor 3s normal forwards 1;
-    transform-origin: center bottom;
-    z-index: 10;
 }
 
-@keyframes upOffPage {
-    0%,
-    to { transform: translateY(-25vh); }
-}
 @keyframes bounce {
     from,
     20%,
@@ -139,50 +167,35 @@ body {
       animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       transform: translate3d(0, 0, 0);
     }
-  
     40%,
     43% {
       animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
       transform: translate3d(0, -30px, 0) scaleY(1.1);
     }
-  /*
     70% {
       animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
       transform: translate3d(0, -15px, 0) scaleY(1.05);
     }
-  */
     80% {
       transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       transform: translate3d(0, 0, 0) scaleY(0.95);
     }
-  /*
     90% {
       transform: translate3d(0, -4px, 0) scaleY(1.02);
-    }*/
-  }
-@keyframes fadeInDownBigConnor {
-    from {
-      opacity: 0;
-      transform: translate3d(0, -20vh, 0);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
     }
   }
 
-/*
-@keyframes fallingName {
-    0% { transform: translateY(-25vh); }
-    0.00075% { transform: translateY(0vh); }
-    0.00125% { transform: translateY(-3vh); }
-    0.00175% {transform: translateY(0vh); }
-    0.002% { transform: translateY(-1vh); }
-    0.00275% {transform: translateY(0vh); }
-    100% { transform: translateY(0vh); }
+@keyframes fadeInDownBigConnor {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20vh, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
-*/
+
 .o1 {
     animation-delay: 1.2s;
 }
@@ -217,16 +230,14 @@ body {
     animation-delay: 1.35s;
 }
 
+/*
 @keyframes imConnorColor {
     0% { color: white; }
     1% { color: #5EE7FF; }
     100% { color: white; }
 }
-/*
-span:hover {
-    animation: imConnorColor 100s linear 1;
-}
 */
+
 .im-connor-sub {
     grid-area: my-name-sub;
     color: white;
@@ -245,7 +256,7 @@ span:hover {
 #hex-svg-wrapper {
     grid-area: svg;
     background-color: #222222;
-    /*border-radius: 50%;*/
+    border-radius: 50%;
 }
 
 /* About Me Section */
@@ -257,63 +268,6 @@ span:hover {
 span:hover {
     animation: bounce;
     animation-play-state: paused;
-}
-  
-#about-me-head:hover, #projects-head:hover, #contact-me-head:hover {
-    animation: bounce 1s normal forwards 1;
-}
-
-@keyframes bounce {
-    from,
-    20%,
-    53%,
-    to {
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      transform: translate3d(0, 0, 0);
-    }
-  
-    40%,
-    43% {
-      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-      transform: translate3d(0, -30px, 0) scaleY(1.1);
-    }
-  /*
-    70% {
-      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-      transform: translate3d(0, -15px, 0) scaleY(1.05);
-    }
-  */
-    80% {
-      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      transform: translate3d(0, 0, 0) scaleY(0.95);
-    }
-  /*
-    90% {
-      transform: translate3d(0, -4px, 0) scaleY(1.02);
-    }*/
-  }
-
-#about-me-head:hover, #l1:hover {
-    animation: bounce 1s normal forwards 1;
-    animation-delay: 0.1s;
-}
-#l2 {
-    animation-delay: 0.2s;
-}
-#l3 {
-    animation-delay: 0.3s;
-}
-#l4 {
-    animation-delay: 0.4s;
-}
-#l5 {
-    animation-delay: 0.5s;
-}
-#l6 {
-    animation-delay: 0.6s;
-}
-#l7 {
-    animation-delay: 0.7s;
 }
 
 #about-me-text {
@@ -364,21 +318,6 @@ span:hover {
 #proj-img-number, #proj-img-oldsite {
     animation: projImgBreathing2 7.5s linear infinite;
 }
-
-/*
-@keyframes projImgBorder {
-    0% { border-color: #E66199 }
-    11% { border-color: #DD3F82  }
-    22% { border-color: #D31B68 }
-    33% { border-color: #A8074B }
-    44% { border-color: #810036 }
-    55% { border-color: #810036 }
-    66% { border-color: #A8074B  }
-    77% { border-color: #D31B68 }
-    88% { border-color: #DD3F82 }
-    100% { border-color: #E66199 }
-}
-*/
 
 @keyframes projImgBreathing {
     0% { scale: 1 }
@@ -477,155 +416,3 @@ span:hover {
     transform: translateY(12.5px);
     transition: ease-in, 0.7s;
 }
-
-
-/*
-.c {
-    transform: translateY(-25vh);
-    animation: fallingC 100000s linear 1;
-}
-
-.o1 {
-    transform: translateY(-25vh);
-    animation: fallingO1 100000s 0.1s linear 1;
-}
-
-.n1 {
-    transform: translateY(-25vh);
-    animation: fallingN1 100000s linear 0.2s 1;
-}
-
-.n2 {
-    transform: translateY(-25vh);
-    animation: fallingN2 100000s linear 0.3s 1;
-}
-
-.o2 {
-    transform: translateY(-25vh);
-    animation: fallingO2 100000s linear 0.4s 1;
-}
-
-.r1 {
-    transform: translateY(-25vh);
-    animation: fallingR1 100000s linear 0.5s 1;
-}
-
-.k {
-    transform: translateY(-25vh);
-    animation: fallingK 100000s linear 0.6s 1;
-}
-
-.o3 {
-    transform: translateY(-25vh);
-    animation: fallingO3 100000s linear 0.7s 1;
-}
-
-.r2 {
-    transform: translateY(-25vh);
-    animation: fallingR2 100000s linear 0.8s 1;
-}
-
-.m {
-    transform: translateY(-25vh);
-    animation: fallingM 100000s linear 0.9s 1;
-}
-
-.o4 {
-    transform: translateY(-25vh);
-    animation: fallingO4 100000s linear 1s 1;
-}
-
-.s {
-    transform: translateY(-25vh);
-    animation: fallingS 100000s linear 1.1s 1;
-}
-
-@keyframes fallingC {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingO1 {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingN1 {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingN2 {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingO2 {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingR1 {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingK {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingO3 {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingR2 {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingM {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingO4 {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fallingS {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-*/
-
-/*
-.im-connor {
-    grid-area: my-name;
-    color: white;
-    font-size: 5rem;
-    text-shadow: 0 0 7px black;
-    transform: translateY(-25vh);
-    animation: fallingName 100000s linear 1;
-}
-
-@keyframes fallingName {
-    0% { transform: translateY(-25vh); }
-    0.0025% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-*/

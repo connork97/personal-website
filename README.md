@@ -11,6 +11,433 @@ Checklist:
 -Links to external contacts (LinkedIn, Email, etc) - Check
 -Showcase other projects (images displayed, links, etc) - Check
 
+<!--CSS I May Use Later -->
+
+/*
+@keyframes fallingName {
+    0% { transform: translateY(-25vh); }
+    0.00075% { transform: translateY(0vh); }
+    0.00125% { transform: translateY(-3vh); }
+    0.00175% {transform: translateY(0vh); }
+    0.002% { transform: translateY(-1vh); }
+    0.00275% {transform: translateY(0vh); }
+    100% { transform: translateY(0vh); }
+}
+*/
+
+
+#l1 {
+    animation: bounce 1s normal forwards 1;
+    animation-delay: 1s;
+}
+#l2 {
+    animation: bounce 1s normal forwards 1;
+    animation-delay: 2s;
+}
+#l3 {
+    animation-delay: 0.3s;
+}
+#l4 {
+    animation-delay: 0.4s;
+}
+#l5 {
+    animation-delay: 0.5s;
+}
+#l6 {
+    animation-delay: 0.6s;
+}
+#l7 {
+    animation-delay: 0.7s;
+}
+
+
+/*
+.c {
+    transform: translateY(-25vh);
+    animation: fallingC 100000s linear 1;
+}
+
+.o1 {
+    transform: translateY(-25vh);
+    animation: fallingO1 100000s 0.1s linear 1;
+}
+
+.n1 {
+    transform: translateY(-25vh);
+    animation: fallingN1 100000s linear 0.2s 1;
+}
+
+.n2 {
+    transform: translateY(-25vh);
+    animation: fallingN2 100000s linear 0.3s 1;
+}
+
+.o2 {
+    transform: translateY(-25vh);
+    animation: fallingO2 100000s linear 0.4s 1;
+}
+
+.r1 {
+    transform: translateY(-25vh);
+    animation: fallingR1 100000s linear 0.5s 1;
+}
+
+.k {
+    transform: translateY(-25vh);
+    animation: fallingK 100000s linear 0.6s 1;
+}
+
+.o3 {
+    transform: translateY(-25vh);
+    animation: fallingO3 100000s linear 0.7s 1;
+}
+
+.r2 {
+    transform: translateY(-25vh);
+    animation: fallingR2 100000s linear 0.8s 1;
+}
+
+.m {
+    transform: translateY(-25vh);
+    animation: fallingM 100000s linear 0.9s 1;
+}
+
+.o4 {
+    transform: translateY(-25vh);
+    animation: fallingO4 100000s linear 1s 1;
+}
+
+.s {
+    transform: translateY(-25vh);
+    animation: fallingS 100000s linear 1.1s 1;
+}
+
+@keyframes fallingC {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingO1 {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingN1 {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingN2 {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingO2 {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingR1 {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingK {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingO3 {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingR2 {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingM {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingO4 {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fallingS {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+*/
+
+/*
+.im-connor {
+    grid-area: my-name;
+    color: white;
+    font-size: 5rem;
+    text-shadow: 0 0 7px black;
+    transform: translateY(-25vh);
+    animation: fallingName 100000s linear 1;
+}
+
+@keyframes fallingName {
+    0% { transform: translateY(-25vh); }
+    0.0025% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+*/
+
+<!-- JavaScript Functions I May Use Later:  -->
+
+/*
+//Hexagon SVG Functions
+
+//const hexArrA = ['#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', '#l1a', ]
+
+
+const hex1 = KUTE.fromTo(
+    '#l1a',
+    {path: '#l1a'},
+    {path: '#l1b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex1.start()
+
+const hex2 = KUTE.fromTo(
+    '#l2a',
+    {path: '#l2a'},
+    {path: '#l2b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex2.start()
+
+const hex3 = KUTE.fromTo(
+    '#l3a',
+    {path: '#l3a'},
+    {path: '#l3b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex3.start()
+
+const hex4 = KUTE.fromTo(
+    '#l4a',
+    {path: '#l4a'},
+    {path: '#l4b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex4.start()
+
+const hex5 = KUTE.fromTo(
+    '#l5a',
+    {path: '#l5a'},
+    {path: '#l5b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex5.start()
+
+const hex6 = KUTE.fromTo(
+    '#l6a',
+    {path: '#l6a'},
+    {path: '#l6b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex6.start()
+
+const hex7 = KUTE.fromTo(
+    '#l7a',
+    {path: '#l7a'},
+    {path: '#l7b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex7.start()
+
+const hex8 = KUTE.fromTo(
+    '#l8a',
+    {path: '#l8a'},
+    {path: '#l8b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex8.start()
+
+const hex9 = KUTE.fromTo(
+    '#l9a',
+    {path: '#l9a'},
+    {path: '#l9b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex9.start()
+
+const hex10 = KUTE.fromTo(
+    '#l10a',
+    {path: '#l10a'},
+    {path: '#l10b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex10.start()
+
+const hex11 = KUTE.fromTo(
+    '#l11a',
+    {path: '#l11a'},
+    {path: '#l11b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex11.start()
+
+const hex12 = KUTE.fromTo(
+    '#l12a',
+    {path: '#l12a'},
+    {path: '#l12b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex12.start()
+
+const hex13 = KUTE.fromTo(
+    '#l13a',
+    {path: '#l13a'},
+    {path: '#l13b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex13.start()
+
+const hex14 = KUTE.fromTo(
+    '#l14a',
+    {path: '#l14a'},
+    {path: '#l14b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex14.start()
+
+const hex15 = KUTE.fromTo(
+    '#l15a',
+    {path: '#l15a'},
+    {path: '#l15b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex15.start()
+
+const hex16 = KUTE.fromTo(
+    '#l16a',
+    {path: '#l16a'},
+    {path: '#l16b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex16.start()
+
+const hex17 = KUTE.fromTo(
+    '#l17a',
+    {path: '#l17a'},
+    {path: '#l17b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex17.start()
+
+const hex18 = KUTE.fromTo(
+    '#l18a',
+    {path: '#l18a'},
+    {path: '#l18b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex18.start()
+
+const hex19 = KUTE.fromTo(
+    '#l19a',
+    {path: '#l19a'},
+    {path: '#l19b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex19.start()
+
+const hex20 = KUTE.fromTo(
+    '#l20a',
+    {path: '#l20a'},
+    {path: '#l20b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex20.start()
+
+const hex21 = KUTE.fromTo(
+    '#l21a',
+    {path: '#l21a'},
+    {path: '#l21b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex21.start()
+
+const hex22 = KUTE.fromTo(
+    '#l22a',
+    {path: '#l22a'},
+    {path: '#l22b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex22.start()
+
+const hex23 = KUTE.fromTo(
+    '#l23a',
+    {path: '#l23a'},
+    {path: '#l23b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex23.start()
+
+const hex24 = KUTE.fromTo(
+    '#l24a',
+    {path: '#l24a'},
+    {path: '#l24b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex24.start()
+
+const hex25 = KUTE.fromTo(
+    '#l25a',
+    {path: '#l25a'},
+    {path: '#l25b'},
+    {repeat: 999, duration: 7500, yoyo: true}
+)
+
+hex25.start()
+
+*/
+
+<!-- Hex SVG That May Be Used Later: -->
 
             </g>
             <g stroke-width="3.5" stroke="url(#ccchaos-grad)" fill="none" stroke-linecap="round" style="visibility: hidden">
