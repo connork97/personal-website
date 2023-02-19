@@ -289,10 +289,11 @@ span:hover {
     align-items: center;
     justify-items: center;
     margin: auto 5vw auto 5vw;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     row-gap: 10vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
+        "text0 img0 img0"
         "img1 img1 text1"
         "text2 img2 img2"
         "img3 img3 text3"
@@ -311,11 +312,23 @@ span:hover {
     animation: projImgBorder 30s infinite;
 }
 
+#proj-img-maze:hover, #proj-img-wheel:hover, #proj-img-number:hover, #proj-img-music:hover, #proj-img-oldsite:hover {
+    animation: projImgHover 100s ease 1;
+}
+
+@keyframes projImgHover {
+    0% { opacity: 1; scale: 1.015; }
+    1.5% { opacity: 0.75; scale: 1.05; }
+    97% { opacity: 0.75; scale: 1.05; }
+    100% { opacity: 1; scale: 1.015; }
+}
+
+
 #proj-img-wheel, #proj-img-music {
     animation: projImgBreathing 7.5s linear infinite;
 }
 
-#proj-img-number, #proj-img-oldsite {
+#proj-img-maze, #proj-img-number, #proj-img-oldsite {
     animation: projImgBreathing2 7.5s linear infinite;
 }
 
@@ -336,10 +349,17 @@ span:hover {
     text-decoration: none;
     font-size: 2rem;
     text-shadow: 0 0 3px black;
+    box-shadow: 0 0 7.5px black;
     padding: 1rem;
     border-width: 2rem;
     border-radius: 25px;
     background-color: #DD3F82;
+    transition: ease-out 0.5s;
+}
+
+.proj-text:hover {
+    scale: 1.05;
+    transition: ease-in 0.75s;
 }
 
 #proj-text-wheel, #proj-text-music {
@@ -348,7 +368,7 @@ span:hover {
         projTextJump 15s ease infinite;
 }
 
-#proj-text-number, #proj-text-oldsite {
+#proj-text-maze, #proj-text-number, #proj-text-oldsite {
     animation: 
         projtextbackground 30s linear infinite,
         projTextJump2 15s ease infinite;
